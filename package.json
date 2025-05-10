@@ -1,5 +1,7 @@
 {
-  "dependencies": {},
+  "dependencies": {
+    "vitepress-sidebar": "^1.31.1"
+  },
   "devDependencies": {
     "vitepress": "^1.6.3"
   },

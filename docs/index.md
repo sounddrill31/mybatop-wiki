@@ -12,7 +12,7 @@ hero:
       link: /download
     - theme: alt
       text: Docs
-      link: /docs
+      link: /docs/get-started
 
 features:
   - title: Feature A

@@ -1,7 +1,27 @@
 import { defineConfig } from 'vitepress'
+import { withSidebar } from 'vitepress-sidebar';
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+
+function genSidebarConfig(doc){
+  return {
+    documentRootPath: 'docs',
+    scanStartPath: doc,
+    resolvePath: `/${doc}/`,
+    collapsed: false,
+    hyphenToSpace: true,
+    capitalizeEachWords: true,
+    underscoreToSpace: true,
+    includeEmptyFolder: false,
+    sortMenusByName: false,
+    excludePattern: ['README**'],
+    sortMenusByFrontmatterOrder: true,
+    includeFolderIndexFile: true,
+    useTitleFromFrontmatter: true
+  }
+};
+
+const vitePressOptions  = ({
   title: "mybatop",
   description: "Battery monitoring tool for linux with tracking",
   cleanUrls: true,
@@ -11,29 +31,20 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Download', link: '/download' },
-      { text: 'Docs', link: '/docs' }
+      { text: 'Docs', link: '/docs/get-started' }
     ],
 
     editLink: {
       pattern: 'https://github.com/sounddrill31/mybatop-wiki/edit/main/docs/:path' // Change this url
     },
-
-    sidebar: [
-      {
-    text: "Documentation",
-    base: "/docs",
-        items: [
-          { text: 'Getting Started', link: '/' },
-          { text: 'Installation', link: '/install' },
-          { text: 'Installation from Source', link: '/install-from-source' },
-          { text: 'Generate Data', link: '/gen-data' },
-          { text: 'Generate Reports', link: '/gen-reports' },
-        ]
-      }
-    ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vishnumur777/mybatop' }
     ]
   }
 })
+
+const vitePressSidebarOptions = [genSidebarConfig("docs")]
+
+export default defineConfig(withSidebar(vitePressOptions,vitePressSidebarOptions));  
+
+// sidebar stuff referenced from FOSSonTOP(credit to @PugzAreCute) https://github.com/FOSSonTop/website/blob/main/docs/.vitepress/config.mts
