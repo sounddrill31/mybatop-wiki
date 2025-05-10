@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "mybatop"
-  text: " Battery monitoring tool for linux with tracking"
+  tagline: "Battery monitoring tool for linux with tracking"
   #tagline: My great project tagline
   actions:
     - theme: brand

@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "mybatop",
-  description: " Battery monitoring tool for linux with tracking",
+  description: "Battery monitoring tool for linux with tracking",
   cleanUrls: true,
   base: '/mybatop-wiki/', //Change this when deploying
   themeConfig: {
