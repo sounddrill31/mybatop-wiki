@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "mybatop",
   description: " Battery monitoring tool for linux with tracking ",
+  base: '/mybatop-wiki/', //Change this when deploying
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
