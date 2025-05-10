@@ -12,7 +12,7 @@ features:
     #icon: <put svg here>
   - title: Arch Linux
     details: Click to Download for Arch Linux (yay)
-    link: /docs/install#_3-arch-linux
+    link: https://github.com/vishnumur777/mybatop/releases/download/1.0.0/mybatop-1.0.0-1-any.pkg.tar.zst
     #icon: <put svg here>
   - title: Fedora
     details: Click to Download for Fedora/OpenSUSE/CentOS (rpm)
