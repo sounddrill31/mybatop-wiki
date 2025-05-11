@@ -22,4 +22,8 @@ features:
     details: Click to Download Source Code
     link: https://github.com/vishnumur777/mybatop/releases/download/1.0.0/mybatop-1.0.0.tar.gz
     #icon: <put svg here>
+  - title: Source Code Zip
+    details: Click to Download Source Code
+    link: https://github.com/vishnumur777/mybatop/releases/download/1.0.0/mybatop-1.0.0.zip
+    #icon: <put svg here>
 ---

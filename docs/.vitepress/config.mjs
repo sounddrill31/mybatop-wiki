@@ -25,7 +25,7 @@ const vitePressOptions  = ({
   title: "mybatop",
   description: "Battery monitoring tool for linux with tracking",
   cleanUrls: true,
-  base: '/mybatop-wiki/', //Change this when deploying
+  base: '/', //Change this when deploying
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
