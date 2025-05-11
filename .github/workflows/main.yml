@@ -44,7 +44,7 @@ jobs:
         uses: actions/download-artifact@v4  # Use stable version
         with:
           name: dist
-          path: dist  # Built files now in ./dist
+          path: docs/.vitepress/dist  # Point to downloaded files
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
