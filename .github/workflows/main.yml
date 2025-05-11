@@ -65,16 +65,16 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-deploy-firebase:
-  name: Deploy to firebase hosting
-  needs: build
-  runs-on: ubuntu-latest
-  steps:
-  - name: Start deploying...
-    uses: w9jds/firebase-action@master
-    with:
-      args: deploy --only hosting
-    env:
-      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+  deploy-firebase:
+    name: Deploy to firebase hosting
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Start deploying...
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
     
