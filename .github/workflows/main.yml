@@ -41,7 +41,7 @@ jobs:
       - name: Checkout Repository  # Critical for firebase.json
         uses: actions/checkout@v4
       - name: Download Artifact
-        uses: actions/download-artifact@v3  # Use stable version
+        uses: actions/download-artifact@v4  # Use stable version
         with:
           name: dist
           path: dist  # Built files now in ./dist
