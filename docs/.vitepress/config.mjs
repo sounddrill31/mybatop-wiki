@@ -33,7 +33,9 @@ const vitePressOptions  = ({
       { text: 'Download', link: '/download' },
       { text: 'Docs', link: '/docs/get-started' }
     ],
-
+    search: {
+      provider: 'local'
+    },
     editLink: {
       pattern: 'https://github.com/sounddrill31/mybatop-wiki/edit/main/docs/:path' // Change this url
     },
