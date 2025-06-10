@@ -585,30 +585,47 @@ onUnmounted(() => {
   line-height: 1.6;
 }
 
+.software-thank-section {
+  padding: 80px 5vw;
+  background: var(--vp-c-bg);
+  width: 100%;
+  text-align: center;
+}
 .logo-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  transition: all 0.3s ease;
-  margin-left: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.logo-row img {
-  height: 800px;
-  width: 800px;
-  transition: transform 0.2s;
-}
 .powers {
-  text-align: center;
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 700;
-  margin-bottom: 10vh;
+  margin-bottom: 60px;
   color: var(--vp-c-text-1);
 }
 
-.logo-row img:hover {
-  transform: scale(1.1);
+.logo-row a {
+  display: block;
+  transition: transform 0.3s ease;
+  filter: grayscale(0.3);
 }
+
+.logo-row a:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+.logo-row img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
 /* Installation Section */
 .install-section {
   padding: 10px 5vw;
@@ -782,4 +799,33 @@ onUnmounted(() => {
     width: 200px;
   }
 }
+
+@media (max-width: 768px) {
+  .logo-row {
+    gap: 40px;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .logo-row img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-row {
+    gap: 30px;
+  }
+  
+  .logo-row img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .powers {
+    margin-bottom: 40px;
+  }
+}
+
 </style>
