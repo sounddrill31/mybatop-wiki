@@ -588,14 +588,14 @@ onUnmounted(() => {
 .logo-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 100px;
   transition: all 0.3s ease;
   margin-left: 40vh;
 }
 
 .logo-row img {
-  height: 128px;
-  width: 128px;
+  height: 10vh;
+  width: 10vh;
   transition: transform 0.2s;
 }
 .powers {
