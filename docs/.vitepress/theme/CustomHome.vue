@@ -588,7 +588,7 @@ onUnmounted(() => {
 .logo-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 100px;
+  gap: 50px;
   transition: all 0.3s ease;
   margin-left: 40vh;
 }
