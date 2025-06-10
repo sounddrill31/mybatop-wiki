@@ -594,8 +594,8 @@ onUnmounted(() => {
 }
 
 .logo-row img {
-  height: 10vh;
-  width: 10vh;
+  height: 800px;
+  width: 800px;
   transition: transform 0.2s;
 }
 .powers {
