@@ -356,6 +356,7 @@ onUnmounted(() => {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
   background: linear-gradient(120deg, #16a34a, #d97706);
+  color: black;
 }
 
 .btn-secondary {
@@ -586,7 +587,7 @@ onUnmounted(() => {
 }
 
 .software-thank-section {
-  padding: 80px 5vw;
+  padding: 80px 5vw 0px 5vw;
   background: var(--vp-c-bg);
   width: 100%;
   text-align: center;
@@ -670,13 +671,15 @@ onUnmounted(() => {
   color: var(--vp-c-text-2);
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .tab-btn.active {
   background: linear-gradient(120deg, #22c55e, #eab308);
-  color: white;
+  color: black;
+  font-weight: 600;
   border-color: #22c55e;
 }
 

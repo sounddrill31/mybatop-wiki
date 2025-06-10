@@ -14,7 +14,7 @@ Installation of mybatop is simple and easy. We can download mybatop on 3 differe
 
 ## 1. Ubuntu/Debian
 
-1. Download latest version of mybatop in `[Downloads](/download)` page.
+1. Download latest version of mybatop in [Downloads](/download) page.
 2. Open terminal and navigate to the directory where the downloaded file is located.
 3. Run the following command to install mybatop.
 
@@ -34,7 +34,7 @@ sudo dnf install mybatop-*.rpm
 (OR)
 
 
-1. Download latest version of mybatop in `[Downloads](/download)` page.
+1. Download latest version of mybatop in [Downloads](/download) page.
 2. Open terminal and navigate to the directory where the downloaded file is located.
 3. Run the following command to install mybatop.
 
@@ -52,7 +52,7 @@ yay -S mybatop
 
 (OR)
 
-1. Download latest version of mybatop in `Downloads` page.
+1. Download latest version of mybatop in [Downloads](/download) page.
 2. Open terminal and navigate to the directory where the downloaded file is located.
 3. Run the following command to install mybatop.
 

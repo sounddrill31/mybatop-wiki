@@ -6,7 +6,7 @@ order: 2
 
 # Installation from Source
 
-1. Download latest version of mybatop source tarball or zip file from `Downloads` page.
+1. Download latest version of mybatop source tarball or zip file from [Downloads](/download) page.
 
 2. Open terminal and navigate to the directory where the downloaded file is located.
 
