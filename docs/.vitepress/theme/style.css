@@ -137,3 +137,144 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * Mobile Navigation Fix
+ * -------------------------------------------------------------------------- */
+
+/* Ensure mobile menu is visible and functional */
+@media (max-width: 768px) {
+  /* Make sure the hamburger menu is visible */
+  .VPNavBarHamburger {
+    display: flex !important;
+  }
+
+  /* Ensure nav items are properly displayed in mobile menu */
+  .VPNavBarMenu {
+    display: none;
+  }
+
+  /* Mobile sidebar navigation styles */
+  .VPSidebar {
+    background: var(--vp-c-bg) !important;
+  }
+
+  .VPSidebarNav .nav-link {
+    display: block;
+    padding: 12px 24px;
+    color: var(--vp-c-text-1);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid var(--vp-c-divider);
+    transition: all 0.3s ease;
+  }
+
+  .VPSidebarNav .nav-link:hover {
+    background: var(--vp-c-bg-soft);
+    color: var(--vp-c-brand-1);
+  }
+
+  /* Ensure the mobile nav menu shows navigation items */
+  .VPNavScreen .VPNavScreenMenuGroup {
+    border-bottom: 1px solid var(--vp-c-divider);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+
+  .VPNavScreen .VPNavScreenMenuGroupTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--vp-c-text-1);
+    margin-bottom: 8px;
+  }
+
+  .VPNavScreen .VPNavScreenMenuGroupLink {
+    display: block;
+    padding: 8px 0;
+    color: var(--vp-c-text-2);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .VPNavScreen .VPNavScreenMenuGroupLink:hover {
+    color: var(--vp-c-brand-1);
+  }
+
+  /* Fix for nav screen visibility */
+  .VPNavScreen {
+    padding-top: 80px; /* Account for fixed header */
+  }
+
+  /* Ensure nav items are properly styled in mobile */
+  .VPNavBarMenuLink {
+    font-weight: 500;
+    color: var(--vp-c-text-1);
+  }
+}
+
+/* Desktop navigation improvements */
+@media (min-width: 769px) {
+  .VPNavBarMenu {
+    display: flex !important;
+  }
+  
+  .VPNavBarHamburger {
+    display: none !important;
+  }
+
+  .VPNavBarMenuLink:hover {
+    color: var(--vp-c-brand-1);
+  }
+}
+
+/* General nav improvements */
+.VPNav {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Dark mode */
+.dark .VPNav {
+  background: rgba(26, 26, 26, 0.9) !important;
+}
+
+/* Ensure custom header doesn't interfere with mobile nav */
+.VPNavBarTitle {
+  flex-shrink: 0;
+}
+
+/* Fix z-index issues */
+.VPNavScreen {
+  z-index: 9999;
+}
+
+.VPNavBar {
+  z-index: 10000;
+}
+
+/* Style the mobile menu toggle */
+.VPNavBarHamburger .hamburger {
+  width: 24px;
+  height: 24px;
+}
+
+.VPNavBarHamburger .line {
+  background: var(--vp-c-text-1);
+  height: 2px;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Additional mobile nav fixes */
+.VPNavBarMenu .VPNavBarMenuLink {
+  padding: 0 12px;
+  line-height: var(--vp-nav-height);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  transition: color 0.25s;
+}
+
+.VPNavBarMenu .VPNavBarMenuLink:hover,
+.VPNavBarMenu .VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-1);
+}

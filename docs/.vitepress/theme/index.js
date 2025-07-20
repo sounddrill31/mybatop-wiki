@@ -12,12 +12,16 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-       'nav-bar-title-before': () => h(CustomHeader),
+      'nav-bar-title-before': () => h(CustomHeader),
     })
   },
   enhanceApp({ app, router, siteData }) {
+    // Register custom components
     app.component('CustomHome', CustomHome)
     app.component('CustomDownload', CustomDownload)
     app.component('CustomHeader', CustomHeader)
+    
+    // Ensure navigation is available globally
+    app.config.globalProperties.$nav = siteData.value.themeConfig.nav
   },
 }
