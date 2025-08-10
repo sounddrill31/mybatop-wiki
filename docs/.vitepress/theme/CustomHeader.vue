@@ -31,7 +31,9 @@
         </div>
         
         <div class="navbar-actions">
-          <VPNavBarSearch class="navbar-search" />
+          <div @click.prevent.stop="openSearch">
+            <VPNavBarSearch class="navbar-search" />
+          </div>
           
           <!-- Theme Toggle -->
           <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
@@ -82,7 +84,7 @@
         </a>
       </div>
       <div class="mobile-actions">
-        <button class="mobile-search-btn" @click="toggleSearch">
+        <button class="mobile-search-btn" @click.prevent.stop="openSearch">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8"/>
             <path d="M21 21l-4.35-4.35"/>
@@ -130,11 +132,8 @@ const router = useRouter()
 // Reactive state
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
-const isSearchOpen = ref(false)
 const isDark = ref(false)
 const currentPath = ref('/')
-const searchQuery = ref('')
-const searchInput = ref(null)
 
 // Watch for route changes
 watch(() => router.route.path, (newPath) => {
@@ -165,21 +164,9 @@ const closeMobileMenu = () => {
 }
 
 // Search functions
-const toggleSearch = async () => {
-  isSearchOpen.value = !isSearchOpen.value
-  if (isSearchOpen.value) {
-    await nextTick()
-    searchInput.value?.focus()
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = ''
-  }
-}
-
-const closeSearch = () => {
-  isSearchOpen.value = false
-  searchQuery.value = ''
-  document.body.style.overflow = ''
+const openSearch = () => {
+  // This triggers the VitePress search modal
+  window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
 }
 
 // Theme toggle function
@@ -200,9 +187,7 @@ const initTheme = () => {
 // Handle escape key
 const handleKeydown = (e) => {
   if (e.key === 'Escape') {
-    if (isSearchOpen.value) {
-      closeSearch()
-    } else if (isMobileMenuOpen.value) {
+    if (isMobileMenuOpen.value) {
       closeMobileMenu()
     }
   }
@@ -557,22 +542,6 @@ onUnmounted(() => {
   
   .brand-link {
     font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar-container {
-    padding: 0 12px;
-    height: 60px;
-  }
-  
-  .mobile-menu {
-    top: 60px;
-  }
-  
-  .brand-link {
-    font-size: 1.2rem;
-    gap: 8px;
   }
   
   .battery-body-mini {
