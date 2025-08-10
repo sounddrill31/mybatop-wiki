@@ -15,8 +15,8 @@
             All packages are professionally built and tested.
           </p>
           <div class="version-info">
-            <span class="version-badge">Latest: v1.0.0</span>
-            <span class="release-date">Released: June 2025</span>
+            <span class="version-badge">Latest: v1.0.1</span>
+            <span class="release-date">Released: August 2025</span>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
               <div class="install-preview">
                 <div class="command-line">
                   <span class="prompt">$</span>
-                  <span class="command">sudo dpkg -i mybatop-1.0.0.deb</span>
+                  <span class="command">sudo dpkg -i mybatop-1.0.1.deb</span>
                 </div>
               </div>
             </div>
@@ -62,8 +62,6 @@
               </a>
               <div class="file-info">
                 <span>Size: 9.4 KB</span>
-                <span>•</span>
-                <span>{{ debDownloads }} downloads</span>
               </div>
             </div>
           </div>
@@ -99,8 +97,6 @@
               </a>
               <div class="file-info">
                 <span>Size: 15.1 KB</span>
-                <span>•</span>
-                <span>{{ archDownloads }} downloads</span>
               </div>
             </div>
           </div>
@@ -121,7 +117,7 @@
               <div class="install-preview">
                 <div class="command-line">
                   <span class="prompt">$</span>
-                  <span class="command">sudo rpm -i mybatop-1.0.0-1.fc41.noarch.rpm</span>
+                  <span class="command">sudo rpm -i mybatop-1.0.1-1.fc41.noarch.rpm</span>
                 </div>
               </div>
             </div>
@@ -136,8 +132,6 @@
               </a>
               <div class="file-info">
                 <span>Size: 2.3 MB</span>
-                <span>•</span>
-                <span>{{ rpmDownloads }} downloads</span>
               </div>
             </div>
           </div>
@@ -217,16 +211,12 @@
 import { ref, onMounted } from 'vue'
 
 // Download URLs
-const debDownloadUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.0/mybatop-1.0.0.deb'
-const archDownloadUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.0/mybatop-1.0.0-1-any.pkg.tar.zst'
-const rpmDownloadUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.0/mybatop-1.0.0-1.fc41.noarch.rpm'
-const tarballUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.0/mybatop-1.0.0.tar.gz'
-const zipUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.0/mybatop-1.0.0.zip'
+const debDownloadUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.1/mybatop-1.0.1.deb'
+const archDownloadUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.1/mybatop-1.0.1-1-any.pkg.tar.zst'
+const rpmDownloadUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.1/mybatop-1.0.1-1.fc41.noarch.rpm'
+const tarballUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.1/mybatop-1.0.1.tar.gz'
+const zipUrl = 'https://github.com/vishnumur777/mybatop/releases/download/1.0.1/mybatop-1.0.1.zip'
 
-// Download counters (mock data)
-const debDownloads = ref(1247)
-const archDownloads = ref(523)
-const rpmDownloads = ref(384)
 
 // Track downloads
 const trackDownload = (type) => {
