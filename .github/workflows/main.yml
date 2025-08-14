@@ -46,7 +46,7 @@ jobs:
           name: dist
           path: docs/.vitepress/dist  # Point to downloaded files
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+        uses: w9jds/firebase-action@v14.9.0
         with:
           args: deploy --only hosting  # Point to downloaded files
         env:

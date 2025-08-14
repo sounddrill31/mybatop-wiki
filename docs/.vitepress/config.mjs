@@ -21,7 +21,7 @@ function genSidebarConfig(doc){
   }
 };
 
-const vitePressOptions  = ({
+const vitePressOptions = {
   title: "mybatop",
   description: "Battery monitoring tool for linux with tracking",
   cleanUrls: true,
@@ -41,12 +41,18 @@ const vitePressOptions  = ({
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vishnumur777/mybatop' }
-    ]
+    ],
+    // Add mobile menu configuration
+    siteTitle: 'mybatop',
+    // Ensure mobile nav is enabled
+    outline: {
+      level: [2, 3]
+    }
   }
-})
+}
 
 const vitePressSidebarOptions = [genSidebarConfig("docs")]
 
-export default defineConfig(withSidebar(vitePressOptions,vitePressSidebarOptions));  
+export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));  
 
 // sidebar stuff referenced from FOSSonTOP(credit to @PugzAreCute) https://github.com/FOSSonTop/website/blob/main/docs/.vitepress/config.mts
